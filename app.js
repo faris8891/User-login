@@ -21,3 +21,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/login_user").then(() => {
 
 const login = require("./router/R_login");
 app.use("/login", login);
+
+const signUp = require("./router/R_signup");
+app.use("/signup", signUp);
