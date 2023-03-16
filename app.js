@@ -24,3 +24,6 @@ app.use("/login", login);
 
 const signUp = require("./router/R_signup");
 app.use("/signup", signUp);
+
+const home = require('./router/R_home')
+app.use('/',home)

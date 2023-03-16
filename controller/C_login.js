@@ -16,8 +16,8 @@ module.exports = {
         );
 
         const check = (element) => {
-          console.log(element);
-          console.log(userData);
+          // console.log(element);
+          // console.log(userData);
           if (
             element.name == userData.name &&
             element.password == userData.password
