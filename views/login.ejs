@@ -52,12 +52,11 @@
         />
         <button class="btn btn-primary mt-3 mb-2" type="submit">Login</button>
         <div class="text-danger d-flex justify-content-center">
-          <%if(failed=="Wrong username or password."){%>
-            <h6><%=failed%></h6><%}%>
-            
+          <% if(failed=="Wrong username or password.") {%>
+            <h6><%=failed%></h6>
+            <%}%>
         </div>
       </form>
-      
     </div>
   </body>
 </html>

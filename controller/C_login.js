@@ -1,7 +1,7 @@
 const login = require("../model/M_login");
 module.exports = {
   get: (req, res) => {
-    res.render("../views/login");
+    res.render("../views/login",{failed:''});
   },
 
   post: async (req, res) => {
@@ -17,8 +17,8 @@ module.exports = {
         res.render("../views/user");
         console.log("You are successfully logged");
       } else {
-        let failed = "Wrong username or password."
-        res.render("../views/login",{failed});
+        const failed = "Wrong username or password.";
+        res.render("../views/login", { failed });
         console.log("login failed");
       }
     } catch (error) {
