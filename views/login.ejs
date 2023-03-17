@@ -19,7 +19,7 @@
     <style>
       body {
         height: 100vh;
-        background-color: #3598DC;
+        background-color: #3598dc;
       }
       input,
       label,
@@ -42,11 +42,22 @@
         method="POST"
       >
         <label name="">User Name</label>
-        <input type="text" name="name" required placeholder="Enter user name"/>
+        <input type="text" name="name" required placeholder="Enter user name" />
         <label class="mt-4" name="">Password</label>
-        <input type="password" name="password" required placeholder="Enter password"/>
+        <input
+          type="password"
+          name="password"
+          required
+          placeholder="Enter password"
+        />
         <button class="btn btn-primary mt-3 mb-2" type="submit">Login</button>
+        <div class="text-danger d-flex justify-content-center">
+          <%if(failed=="Wrong username or password."){%>
+            <h6><%=failed%></h6><%}%>
+            
+        </div>
       </form>
+      
     </div>
   </body>
 </html>
